@@ -15,6 +15,38 @@
 
 <header>
 
+ <nav class="navbar">
+  
+  <ul class="nav_list">
+     <li>Cliente</li>
+      <ul class="list_cliente">
+       <li><a>Cadastrar</a></li>
+       <li><a>Consultar</a></li>
+      </ul>
+     <li>Usuario</li>
+      <ul class="list_usuario">
+       <li><a href="">Cadastrar</a></li>
+       <li><a>Consultar</a></li>
+      </ul>
+     <li>Funcinário</li>
+     <ul class="list_funcioario">
+       <li><a>Cadastrar</a></li>
+       <li><a>Consultar</a></li>
+      </ul>
+     <li>Fornecedor</li>
+      <ul class="list_fornecedor">
+       <li><a>Cadastrar</a></li>
+       <li><a>Consultar</a></li>
+      </ul>
+     <li>Produto</li>
+      <ul class="list_produto">
+       <li><a>Cadastrar</a></li>
+       <li><a>Consultar</a></li>
+      </ul>
+  </ul>
+
+ </nav>
+
 </header>
 
 <section class="container">
@@ -61,9 +93,7 @@
     
 
 
-<?php echo '<p>Hello World</p>'; 
-
-?> 
+<?php echo '<p>Hello World</p>'; ?> 
 
   </body>
 </html>
