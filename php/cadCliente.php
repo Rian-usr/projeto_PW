@@ -6,14 +6,16 @@
     <title>CADASTRO DE CLIENTE</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
 
-    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     
+    <script src="/js/validaCPF.js"></script>
+
   </head>
   <body>
 
-<header>
+<!-- <header>
 
  <nav class="navbar">
   
@@ -47,28 +49,28 @@
 
  </nav>
 
-</header>
+</header> -->
 
 <section class="container">
   
 <label class="page-title">CADASTRO CLIENTE</label>
   
   <div class="cad">
-   <form method="post" class="form">
+   <form method="POST" class="form">
     <label class="form-label">NOME COMPLETO:</label> <br>
     <input type="text" class="form-value" id="nome" name="nome"> <br>
     <label class="title"> Documentos </label> <br>
     <label class="form-label">CPF:</label>
-    <input type="number" class="form-value" id="cpf" name="cpf">
+    <input type="number" class="form-value" id="cpf" name="cpf" onblur="validarCPF(this.value)" >
     <label class="form-label">RG:</label>
     <input type="number" class="form-value" id="rg" name="rg"> <br>
     <label class="title"> Endereço residencial </label> <br>
     <label class="form-label">CEP:</label>
-    <input type="number" class="form-value" id="cep" name="cep">
+    <input type="number" class="form-value" id="cep" name="cep" onblur="pesquisaCEP(this.value)">
     <label class="form-label">CIDADE:</label>
     <input type="text" class="form-value" id="cidade" name="cidade">
     <label class="form-label">ESTADO:</label>
-    <input type="text" class="form-value" id="estado" name="estado"> <br>
+    <input type="text" class="form-value" id="uf" name="estado"> <br>
      <label class="form-label">RUA:</label>
     <input type="text" class="form-value" id="rua" name="rua">
     <label class="form-label">Nº:</label>
@@ -93,7 +95,44 @@
     
 
 
-<?php echo '<p>Hello World</p>'; ?> 
+<?php 
 
+if(!empty($_POST)) {
+  $cliente = array(
+    $_POST['nome'],
+    $_POST['cpf'],
+    $_POST['rg'],
+    $_POST['cep'],
+    $_POST['rua'],
+    $_POST['num'],
+    $_POST['bairro'],
+    $_POST['cidade'],
+    $_POST['estado'],
+    $_POST['celular'],
+    $_POST['email']
+  );
+
+  for($i = 0; $i < count($cliente); $i++){
+     echo "<br>" .$cliente[$i];
+  }
+
+  $caminho = "cadastros\cliente.txt";
+
+  $valuesCad = "Cliente : $cliente[0], $cliente[1], $cliente[2], $cliente[3], $cliente[4], $cliente[5], $cliente[6], $cliente[7], 
+  $cliente[8], $cliente[9]";
+
+  if(file_put_contents($caminho, $valuesCad, FILE_APPEND)) {
+    echo"<script> alert('Dados cadastrado com sucesso');</script>";
+  } else {
+    echo"<script> alert('Erro ao cadastrar!');</script>";
+  }
+
+}
+
+
+?> 
+
+    <script src="/js/validaCPF.js"></script>
+    <script src="/js/buscaCEP.js"></script>
   </body>
 </html>
