@@ -118,8 +118,8 @@ if(!empty($_POST)) {
 
   $caminho = "cadastros\cliente.txt";
 
-  $valuesCad = "Cliente : $cliente[0], $cliente[1], $cliente[2], $cliente[3], $cliente[4], $cliente[5], $cliente[6], $cliente[7], 
-  $cliente[8], $cliente[9]";
+  $valuesCad = "Cliente: $cliente[0], $cliente[1], $cliente[2], $cliente[3], $cliente[4], $cliente[5], $cliente[6], $cliente[7], 
+  $cliente[8], $cliente[9] \n";
 
   if(file_put_contents($caminho, $valuesCad, FILE_APPEND)) {
     echo"<script> alert('Dados cadastrado com sucesso');</script>";
