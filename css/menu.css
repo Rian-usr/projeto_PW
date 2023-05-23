@@ -58,29 +58,6 @@ header{
     padding:20px 15px;
 }
 
-.nav_list .nav_item a:hover{
-    -moz-box-shadow:0 3px 10px 0 #CCC;
-    -webkit-box-shadow:0 3px 10px 0 #ccc;
-    text-shadow:0px 0px 5px #fff;
-}
-
-.nav_list .nav_item .menu-item{
-    position:absolute;
-    top:25px;
-    left:0;
-    background-color:#fff;
-    display:none;
-}
-
-.nav_list li:hover ul, .nav_list li.over ul{
-    display: block;
-}
-
-.nav_list .nav_item .menu-item li{
-    border:1px solid #c0c0c0;
-display:block;
-width:150px;
-}
 
 .nav_list .link{
     padding: 10px;

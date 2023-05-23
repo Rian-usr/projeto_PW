@@ -11,51 +11,6 @@ body {
     font-family: 'Comfortaa', cursive;
 }
 
-.navbar .nav_list {
-    list-style: none;
-    border: 1px solid #c0c0c0;
-    float: left;
-}
-
-.navbar .nav_list li {
-    position: relative;
-    float: left;
-    border-right: 1px solid #c0c0c0;
-}
-
-.navbar .nav_list li a {
-    color: #EAE0CC;
-    text-decoration: none;
-    padding: 5px 10px;
-    display: block;
-}
-
-.navbar .nav_list li a:hover {
-    background-color: #04dc9b;
-    color: black;
-    -moz-box-shadow: 0 3px 10px 0 #CCC;
-    -webkit-box-shadow: 0 3px 10px 0 #ccc;
-    text-shadow: 0px 0px 5px #fff;
-}
-
-.nav_list li ul {
-    position: absolute;
-    top: 25px;
-    left: 0px;
-    background-color: white;
-    display: none;
-}
-
-.nav_list li:hover .nav_list li.over ul {
-    display: block;
-}
-
-.nav_list li ul li {
-    border: 1px solid #c0c0c0;
-    display: block;
-    width: 150px;
-}
-
 .container {
     display: flex;
     flex-direction: column;
@@ -67,7 +22,7 @@ body {
     color: #EAE0CC;
     font-family: 'Zilla Slab', serif;
     font-size: 45px;
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 .cad {
@@ -76,7 +31,8 @@ body {
     border: 5px solid #4D6A6D;
     border-radius: 15px;
     padding-left: 20px;
-    margin-top: 100px;
+    margin-top: 80px;
+    margin-bottom:100px;
 }
 
 .form {
@@ -114,6 +70,7 @@ body {
 }
 
 .form .btns input {
+    position: relative;
     width: 200px;
     color: #eee;
 }
