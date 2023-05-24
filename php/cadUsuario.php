@@ -90,6 +90,17 @@ if(!empty($_POST)) {
 
 }
 
+$imagem = $_FILES['imgUsuario'];
+$dir = "img/usuarios/";
+
+date_default_timezone_set('America/Sao_Paulo');
+
+$extensao = strtolower(substr($imagem['name'], -4));
+
+$new_name = date("Y.m.d-H.i.s") . $extensao;
+
+move_uploaded_file($imagem['tmp_name'], $dir.$new_name);
+
 
 ?> 
 
