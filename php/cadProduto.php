@@ -68,7 +68,7 @@
     <div class="btns">
     <input type="reset" value="Limpar" class="btn1"> <br>
     <input type="submit" value="Cadastrar" class="btn2"> <br>
-    <a href="#"><input type="button" value="Voltar" class="btn3"></a>
+    <a href="/php/consultProduto.php"><input type="button" value="Consultar" class="btn3"></a>
     </div>
    </form>
     
@@ -96,7 +96,7 @@ if(!empty($_POST)) {
      echo "<br>" .$produto[$i];
   }
 
-  $caminho = "cadastros\fornecedor.txt";
+  $caminho = "cadastros\Fornecedor.txt";
 
   $valuesCad = "Produto: $produto[0], $produto[1], $produto[2], $produto[3], $produto[4], $produto[5], $produto[6], $produto[7], $produto[8] \n";
 

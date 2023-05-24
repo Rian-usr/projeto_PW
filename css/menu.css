@@ -21,7 +21,7 @@ ul{
 
 header{
     display: flex;
-    background-color: black;
+    background-color: #637566;
     justify-content: space-around;
     padding: 1rem 0;
     align-items:center;
@@ -67,7 +67,7 @@ header{
     border-radius:5px;
 }
 .nav_list .link:hover{
-    background-color: #04dc9b;
+    background-color: #aab69b;
     color: black;
 }
 
@@ -106,7 +106,7 @@ header{
     }
 
     .close:hover{
-        background-color: aqua;
+        background-color: #3f4834;
     }
 
     .nav{

@@ -74,7 +74,7 @@
     <div class="btns">
     <input type="reset" value="Limpar" class="btn1"> <br>
     <input type="submit" value="Cadastrar" class="btn2"> <br>
-    <a href="#"><input type="button" value="Voltar" class="btn3"></a>
+    <a href="#"><input type="button" value="Consultar" class="btn3"></a>
     </div>
    </form>
     
