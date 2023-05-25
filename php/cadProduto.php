@@ -64,6 +64,8 @@
     <input type="number" step="0.010" class="form-value" id="preco" name="preco">
     <label class="form-label">CUSTO:</label>
     <input type="number" step="0.010" class="form-value" id="custo" name="custo"> <br>
+    <label class="form-label">FOTO:</label>
+    <input type="file" accept="image/*" class="form-value" id="image" name="imageProduto"><br>
 
     <div class="btns">
     <input type="reset" value="Limpar" class="btn1"> <br>
@@ -96,7 +98,7 @@ if(!empty($_POST)) {
      echo "<br>" .$produto[$i];
   }
 
-  $caminho = "cadastros\Fornecedor.txt";
+  $caminho = "cadastros\Produto.txt";
 
   $valuesCad = "Produto: $produto[0], $produto[1], $produto[2], $produto[3], $produto[4], $produto[5], $produto[6], $produto[7], $produto[8] \n";
 
@@ -106,6 +108,16 @@ if(!empty($_POST)) {
     echo"<script> alert('Erro ao cadastrar!');</script>";
   }
 
+$image = $_FILES['imageProduto'];
+$dir = "imgs/produtos/";
+
+date_default_timezone_set('America/Sao_Paulo');
+
+$extensao = strtolower(substr($image['name'], -4));
+
+$new_name = date("Y.m.d-H.i.s") . $extensao;
+
+move_uploaded_file($imagem['tmp_name'], $dir.$new_name);
 }
 
 

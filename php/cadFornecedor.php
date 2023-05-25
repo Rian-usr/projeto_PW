@@ -70,6 +70,8 @@
     <input type="number" class="form-value" id="celular" name="celular">
     <label class="form-label">EMAIL:</label>
     <input type="email" class="form-value" id="email" name="email"><br>
+    <label class="form-label">FOTO:</label>
+    <input type="file" accept="image/*" class="form-value" id="image" name="imageFornecedor"><br>
 
     <div class="btns">
     <input type="reset" value="Limpar" class="btn1"> <br>
@@ -114,6 +116,17 @@ if(!empty($_POST)) {
   } else {
     echo"<script> alert('Erro ao cadastrar!');</script>";
   }
+
+$image = $_FILES['imageFornecedor'];
+$dir = "imgs/fornecedores/";
+
+date_default_timezone_set('America/Sao_Paulo');
+
+$extensao = strtolower(substr($image['name'], -4));
+
+$new_name = date("Y.m.d-H.i.s") . $extensao;
+
+move_uploaded_file($imagem['tmp_name'], $dir.$new_name);
 
 }
 

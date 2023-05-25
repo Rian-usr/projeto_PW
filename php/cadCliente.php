@@ -71,6 +71,8 @@
     <input type="number" class="form-value" id="celular" name="celular">
     <label class="form-label">EMAIL:</label>
     <input type="email" class="form-value" id="email" name="email"><br>
+    <label class="form-label">FOTO:</label>
+    <input type="file" accept="image/*" class="form-value" id="image" name="imageCliente"><br>
 
     <div class="btns">
     <input type="reset" value="Limpar" class="btn1"> <br>
@@ -105,7 +107,7 @@ if(!empty($_POST)) {
      echo "<br>" .$cliente[$i];
   }
 
-  $caminho = "cadastros\cliente.txt";
+  $caminho = "cadastros/cliente.txt";
 
   $valuesCad = "Cliente: $cliente[0], $cliente[1], $cliente[2], $cliente[3], $cliente[4], $cliente[5], $cliente[6], $cliente[7], 
   $cliente[8], $cliente[9] \n";
@@ -115,19 +117,21 @@ if(!empty($_POST)) {
   } else {
     echo"<script> alert('Erro ao cadastrar!');</script>";
   }
-
-}
-
-$imagem = $_FILES['imgCliente'];
-$dir = "img/clientes/";
+  
+$image = $_FILES['imageCliente'];
+$dir = "imgs/clientes/";
 
 date_default_timezone_set('America/Sao_Paulo');
 
-$extensao = strtolower(substr($imagem['name'], -4));
+$extensao = strtolower(substr($image['name'], -4));
 
 $new_name = date("Y.m.d-H.i.s") . $extensao;
 
 move_uploaded_file($imagem['tmp_name'], $dir.$new_name);
+
+}
+
+
 
 
 ?> 

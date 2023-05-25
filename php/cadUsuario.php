@@ -52,6 +52,8 @@
     <input type="email" class="form-value" id="email" name="email"><br>
     <label class="form-label">SENHA:</label>
     <input type="password" class="form-value" id="senha" name="senha">
+    <label class="form-label">FOTO:</label>
+    <input type="file" accept="image/*" class="form-value" id="image" name="imageUser"><br>
 
     <div class="btns">
     <input type="reset" value="Limpar" class="btn1"> <br>
@@ -90,8 +92,8 @@ if(!empty($_POST)) {
 
 }
 
-$imagem = $_FILES['imgUsuario'];
-$dir = "img/usuarios/";
+$imagem = $_FILES['imageUser'];
+$dir = "imgs/usuarios/";
 
 date_default_timezone_set('America/Sao_Paulo');
 

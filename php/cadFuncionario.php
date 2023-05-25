@@ -72,6 +72,8 @@
     <input type="number" class="form-value" id="celular" name="celular">
     <label class="form-label">EMAIL:</label>
     <input type="email" class="form-value" id="email" name="email"><br>
+    <label class="form-label">FOTO:</label>
+    <input type="file" accept="image/*" class="form-value" id="image" name="imageFuncionario"><br>
 
     <div class="btns">
     <input type="reset" value="Limpar" class="btn1"> <br>
@@ -107,9 +109,9 @@ if(!empty($_POST)) {
      echo "<br>" .$funcionario[$i];
   }
 
-  $caminho = "cadastros\Fornecedores.txt";
+  $caminho = "cadastros\Funcionarios.txt";
 
-  $valuesCad = "Fornecedores: $funcionario[0], $funcionario[1], $funcionario[2], $funcionario[3], $funcionario[4], $funcionario[5], $funcionario[6], $funcionario[7], 
+  $valuesCad = "Funcionario: $funcionario[0], $funcionario[1], $funcionario[2], $funcionario[3], $funcionario[4], $funcionario[5], $funcionario[6], $funcionario[7], 
   $funcionario[8], $funcionario[9] \n";
 
   if(file_put_contents($caminho, $valuesCad, FILE_APPEND)) {
@@ -120,8 +122,8 @@ if(!empty($_POST)) {
 
 }
 
-$imagem = $_FILES['imgFuncionario'];
-$dir = "img/funcionarios/";
+$imagem = $_FILES['imageFuncionario'];
+$dir = "imgs/funcionarios/";
 
 date_default_timezone_set('America/Sao_Paulo');
 
