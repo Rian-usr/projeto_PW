@@ -1,3 +1,17 @@
+<?php 
+session_start();
+
+if(isset($_SESSION['usuario'])) {
+
+} else {
+  echo " 
+  <script> 
+  window.alert('Não permitido');
+  window.location.href='login.php';
+  </script>";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -6,7 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./css/menu.css">
-    <title>Document</title>
+    <title>Menu</title>
 </head>
 <body>
 
@@ -26,7 +40,8 @@
             <li class="nav_item"> <a href="./php/cadUsuario.php" class="link">Usuários</a> </li>
             <li class="nav_item"> <a href="./php/cadFuncionario.php" class="link">Funcionários</a> </li>
             <li class="nav_item"> <a href="./php/cadFornecedor.php" class="link">Forncedores</a> </li>  
-            <li class="nav_item"> <a href="./php/cadProduto.php" class="link">Produtos</a> </li>          
+            <li class="nav_item"> <a href="./php/cadProduto.php" class="link">Produtos</a> </li> 
+            <li class="nav_item"> <a href="./php/sair.php" class="link">Sair</a> </li>           
           </ul>
         </nav>
     

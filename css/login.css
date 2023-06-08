@@ -25,8 +25,8 @@ body{
 }
 
 .login{
-    width: 500px;
-    height: 650px;
+    width: 450px;
+    height:580px;
     background-color: #637566;
     border-radius: 8px;
 
@@ -70,4 +70,16 @@ body{
 
 }
 
+.login .icon_user {
+   position: absolute;
+   padding-right: 290px;
+   padding-bottom: 95px;
+}
+
+.login .icon_password {
+    position: absolute;
+    padding-right: 290px;
+    
+   }
+   
 
