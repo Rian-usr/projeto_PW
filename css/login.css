@@ -1,4 +1,4 @@
- @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@500&display=swap');
 
 
 *{
@@ -22,15 +22,16 @@ body{
 .container h2{
  font-size: 40px;
  margin-top: 3%;
-}
+} 
 
 .login{
     width: 450px;
-    height:580px;
+    height:500px;
     background-color: #637566;
-    border-radius: 8px;
+    border-radius: 10px;
 
-    margin-top: 8%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .form{
@@ -42,6 +43,10 @@ body{
     margin-top: 200px;
 }
 
+.form img{
+    position: absolute;
+    margin-bottom: 23%;
+}
 .form input{
     width: 250px;
     height: 30px;
@@ -67,19 +72,18 @@ body{
 .form .logar:hover{
     cursor: pointer;
     background-color: #bde2c3;
-
 }
 
 .login .icon_user {
    position: absolute;
-   padding-right: 290px;
-   padding-bottom: 95px;
+   margin-right: 295px;
+   margin-bottom: 75px; 
 }
 
 .login .icon_password {
     position: absolute;
-    padding-right: 290px;
-    
-   }
+    margin-right: 295px;
+    margin-top: 20px;
+}
    
 

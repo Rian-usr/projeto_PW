@@ -19,10 +19,13 @@ session_start();
         <h2>Seja Bem Vindo(a)</h2>
      <div class="login">
       <form method="POST" class="form"> 
-       
-        <i class="fa-solid fa-user-tie fa-xl icon_user" style="color: #193c16;" ></i> <input type="email" name="email" id="email" placeholder="Email" class="inputs" required> <br>
-        <i class="fa-solid fa-lock fa-xl icon_password" style="color: #193c16;" ></i> <input type="password" name="senha" id="senha" placeholder="Senha" class="inputs" required> <br>
-       <input type="submit" value="Logar" class="logar">
+        <img src="./imgs/user.png" alt="user_image" width="245" height="120">
+        <br>
+
+        <i class="fa-solid fa-user-tie fa-xl icon_user" style="color: #000;" ></i> <input type="email" name="email" id="email" placeholder="Email" class="inputs" required> <br>
+        <i class="fa-solid fa-lock fa-xl icon_password" style="color: #000;" ></i> <input type="password" name="senha" id="senha" placeholder="Senha" class="inputs" required> <br>
+
+        <input type="submit" value="Logar" class="logar">
       </form>
      </div>
     </section>
@@ -39,9 +42,9 @@ if(!empty($_POST)) {
     $email = $_POST['email'];
     $senha = $_POST['senha'];
 
-    if(($email == "user@teste.com" && $senha = "0101")) {
+    if(($email == "user@teste.com" && $senha == "0101")) {
         $_SESSION['usuario'] = $email;
-        header('Location:index.html');
+        header('Location:./php/menu.php');
     } else {
         session_destroy();
         echo"<script> alert('Acesso negado!');</script>";

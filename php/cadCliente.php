@@ -7,14 +7,14 @@
     
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/menu.css">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/menu.css">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     
 
   </head>
-  <body>
+  <body background="#f9f4e3">
 
   <header>
         <div class="logo">
@@ -28,11 +28,11 @@
           <ul class="nav_list">
           <li class="nav_item"> <a href="/index.html" class="link">Home</a> </li>
 
-            <li class="nav_item"> <a href="/php/cadCliente.php" class="link">Clientes</a> </li>
-            <li class="nav_item"> <a href="/php/cadUsuario.php" class="link">Usuários</a> </li>
-            <li class="nav_item"> <a href="/php/cadFuncionario.php" class="link">Funcionários</a> </li>
-            <li class="nav_item"> <a href="/php/cadFornecedor.php" class="link">Forncedores</a> </li>  
-            <li class="nav_item"> <a href="/php/cadProduto.php" class="link">Produtos</a> </li>          
+            <li class="nav_item"> <a href="cadCliente.php" class="link">Clientes</a> </li>
+            <li class="nav_item"> <a href="cadUsuario.php" class="link">Usuários</a> </li>
+            <li class="nav_item"> <a href="cadFuncionario.php" class="link">Funcionários</a> </li>
+            <li class="nav_item"> <a href="cadFornecedor.php" class="link">Forncedores</a> </li>  
+            <li class="nav_item"> <a href="cadProduto.php" class="link">Produtos</a> </li>          
           </ul>
         </nav>
     
@@ -77,7 +77,7 @@
     <div class="btns">
     <input type="reset" value="Limpar" class="btn1"> <br>
     <input type="submit" value="Cadastrar" class="btn2"> <br>
-    <a href="/php/consultCliente.php"><input type="button" value="Consultar" class="btn3"></a>
+    <a href="consultCliente.php"><input type="button" value="Consultar" class="btn3"></a>
     </div>
    </form>
     
@@ -104,7 +104,7 @@ if(!empty($_POST)) {
   );
 
   for($i = 0; $i < count($cliente); $i++){
-     echo "<br>" .$cliente[$i];
+    
   }
 
   $caminho = "cadastros/cliente.txt";

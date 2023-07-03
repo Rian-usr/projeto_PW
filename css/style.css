@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@600&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: #f9f4e3;
-    font-family: 'Comfortaa', cursive;
-}
 
 .container {
     display: flex;
@@ -28,12 +18,15 @@ body {
 .cad {
     width: 830px;
     height: 480px;
+    background-color: #b4ae8e;
     border: 5px solid #aabe9b;
     border-radius: 15px;
     padding-left: 20px;
     margin-top: 80px;
     margin-bottom:100px;
     box-shadow: 12px 12px 2px 1px #637566;
+
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .form {
